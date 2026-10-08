@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KK's Beach Day 🌊🩷</title>
+  <style>
+    :root{
+      --pink:#f7a9c4; --pink2:#fff0f6; --blue:#dff6ff;
+      --ink:#3d3540; --muted:#766d77; --white:#fff;
+      --border:#eadce4; --shadow:0 14px 35px rgba(100,70,90,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:ui-rounded,"Avenir Next",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg,#fff7fa 0%,#f4fbff 100%);
+    }
+    .wrap{max-width:850px;margin:auto;padding:22px 16px 50px}
+    .hero{
+      text-align:center;padding:42px 20px 30px;border:1px solid var(--border);
+      border-radius:30px;background:linear-gradient(135deg,#fff0f6,#eafaff);
+      box-shadow:var(--shadow);overflow:hidden;position:relative;
+    }
+    .hero:after{content:"🌊  🐚  🩷  ☀️  🌊";display:block;font-size:25px;margin-top:20px;letter-spacing:8px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800;color:var(--muted)}
+    h1{font-size:clamp(38px,9vw,68px);line-height:.98;margin:13px 0 12px;letter-spacing:-2px}
+    .subtitle{font-size:17px;color:var(--muted);max-width:580px;margin:0 auto;line-height:1.55}
+    .countdown{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:24px}
+    .time{background:#ffffffcc;border:1px solid var(--border);border-radius:17px;padding:11px 13px;min-width:72px}
+    .time strong{display:block;font-size:25px}.time span{font-size:10px;color:var(--muted);font-weight:800;letter-spacing:.1em}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:15px}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:23px;padding:21px;box-shadow:0 8px 24px rgba(100,70,90,.06)}
+    h2{font-size:20px;margin:0 0 10px}
+    p{line-height:1.55}.muted{color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+    .tag{background:var(--pink2);padding:8px 11px;border-radius:999px;font-size:13px;font-weight:700}
+    ol{padding-left:24px;margin:5px 0}.timeline li{padding:7px 0}
+    .rsvp{display:grid;gap:10px}
+    input{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:13px;font:inherit}
+    .choices{display:flex;flex-wrap:wrap;gap:8px}
+    button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:11px 15px;font:inherit;font-weight:750;cursor:pointer}
+    button:hover{transform:translateY(-1px)} button.selected{background:var(--pink2);outline:2px solid var(--pink)}
+    .note{background:#fff7fa;border-left:4px solid var(--pink);padding:10px 12px;border-radius:12px;font-size:14px}
+    .color-input{display:grid;gap:6px}
+    .color-input label{font-size:13px;font-weight:800}
+    .color-input input{margin:0}
+    .submit{background:#ffe1ec;border:0}
+    .guest{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+    .status{font-size:12px;background:var(--pink2);padding:5px 9px;border-radius:999px;white-space:nowrap}
+    .empty{color:var(--muted);font-size:14px}
+    footer{text-align:center;color:var(--muted);font-size:12px;padding:22px 0 0}
+    @media(max-width:480px){.hero{padding:32px 16px 25px}.time{min-width:62px}.time strong{font-size:21px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Birthday Beach Day • Sunday, October 25, 2026</div>
+    <h1>KK's Beach Day 🩷</h1>
+    <p class="subtitle">Beach, matching dresses, pictures, snacks & a whole lot of fun 🎀</p>
+    <div class="countdown" aria-live="polite">
+      <div class="time"><strong id="days">--</strong><span>DAYS</span></div>
+      <div class="time"><strong id="hours">--</strong><span>HOURS</span></div>
+      <div class="time"><strong id="mins">--</strong><span>MIN</span></div>
+      <div class="time"><strong id="secs">--</strong><span>SEC</span></div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>👗 The matching fit</h2>
+      <p class="muted">Everyone chooses their own cute beach dress and their own color. We're matching without looking TOO matching 😂🩷</p>
+      <p class="muted"><strong>👗 Beach dress note:</strong> If you’re able to, please buy a beach dress for the beach day! Choose any cute beach dress and any color you like. 🩷</p>
+      <div class="tags">
+        <span class="tag">Beach dress</span>
+        <span class="tag">Different colors</span>
+        <span class="tag">Swimsuit underneath</span>
+      </div>
+      <p class="muted"><strong>Water note:</strong> If you want to get in, wear your swimsuit underneath your dress!</p>
+    </section>
+
+    <section class="card">
+      <h2>🎒 What to bring</h2>
+      <div class="tags">
+        <span class="tag">Swimsuit</span><span class="tag">Towel</span>
+        <span class="tag">Sunscreen</span><span class="tag">Matching snacks 🍓</span>
+      </div>
+      <p class="note"><strong>Snack note:</strong> Bring a snack that matches your dress color! If your dress has a pattern, your snack does not have to match exactly — you can choose any snack colors you like. 🩷</p>
+    </section>
+  </div>
+
+  <section class="card" style="margin-top:15px">
+    <h2>☀️ The plan</h2>
+    <ol class="timeline">
+      <li>Meet up + get settled 🏖️</li>
+      <li>Group pictures 📸</li>
+      <li>Beach + swimming time 🌊</li>
+      <li>Snacks + games 🍓🃏</li>
+      <li>Birthday celebration 🎂</li>
+      <li>More pictures + sunset vibes 🌅</li>
+    </ol>
+  </section>
+
+  <section class="card" style="margin-top:15px">
+    <h2>💌 RSVP</h2>
+    <p class="muted">Ready to celebrate with me? Fill out the RSVP form so I know who’s coming! 🩷🌊</p>
+    <a class="submit" href="https://forms.gle/dEXA5pxLj5FJDT4W7" target="_blank" rel="noopener">RSVP Here 💌</a>
+    <p class="note">Your RSVP will be saved through Google Forms, so I can see everyone’s responses from my phone! ✨</p>
+  </section>
+
+  <footer>Made with love for Tura's birthday 🩷🌊🎂</footer>
+</div>
+
+<script>
+  const target = new Date("2026-10-25T12:00:00");
+  function updateCountdown(){
+    const diff = Math.max(0, target - new Date());
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("mins").textContent = mins;
+    document.getElementById("secs").textContent = secs;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+</script>
+</body>
+</html>
